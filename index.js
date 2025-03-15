@@ -10,7 +10,7 @@ app.post('/:valor', (req, res, next)=>{
 })
 app.post('/:valor', (req, res, next)=>{
     console.log('Func 1')
-    res.status(200).send('Meu Backend! = '+ JSON.stringify(req.body))
+    res.status(200).send('Meu Backend! = '+ req.body.dependentes[0].nome)
     next()
 })
 app.post('/:valor', (req, res)=>{
