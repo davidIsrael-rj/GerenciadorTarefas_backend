@@ -1,16 +1,19 @@
 const express = require('express')
 const app = express()
 
-app.get('/:valor', (req, res, next)=>{
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+
+app.post('/:valor', (req, res, next)=>{
     console.log('Func 0')
     next()
 })
-app.get('/:valor', (req, res, next)=>{
+app.post('/:valor', (req, res, next)=>{
     console.log('Func 1')
-    res.status(200).send('Meu Backend! = '+ req.params.valor)
+    res.status(200).send('Meu Backend! = '+ req.body.sobrenome)
     next()
 })
-app.get('/:valor', (req, res)=>{
+app.post('/:valor', (req, res)=>{
     console.log('Func 2')
 })
 
