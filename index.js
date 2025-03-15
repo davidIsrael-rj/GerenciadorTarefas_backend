@@ -10,7 +10,7 @@ app.post('/:valor', (req, res, next)=>{
 })
 app.post('/:valor', (req, res, next)=>{
     console.log('Func 1')
-    res.status(200).send('Meu Backend! = '+ req.body.sobrenome)
+    res.status(200).send('Meu Backend! = '+ JSON.stringify(req.body))
     next()
 })
 app.post('/:valor', (req, res)=>{
