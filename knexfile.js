@@ -4,9 +4,11 @@ module.exports = {
 
   client: 'postgresql',
   connection: {
+    host: 'localhost',
     database: 'tasksdb',
     user: 'root',
-    password: '123456'
+    password: '123456',
+    port: 5432 
   },
   pool: {
     min: 2,
